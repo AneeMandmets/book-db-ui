@@ -38,7 +38,7 @@ export default function BookCard({ book, onClick }: BookCardProps) {
       <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{book.title}</h2>
       <p className="text-gray-600 dark:text-gray-400">by {book.author}</p>
       <p className="text-sm text-gray-500 dark:text-gray-500">
-        {book.publishedYear} • {book.genre}
+        {book.publishedYear} • {book.genres.join(", ")}
       </p>
     </div>
   );

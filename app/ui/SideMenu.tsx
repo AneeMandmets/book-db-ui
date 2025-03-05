@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from "next/navigation";
 
-const genres = ["Action", "Adventure", "Biography", "Comedy", "Classic", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Science-Fiction", "Thriller"];
+const genres = ["Action", "Adventure", "Biography", "Comedy", "Classic", "Drama", "Dystopian", "Fantasy", "Fiction", "Horror", "Mystery", "Romance", "Science-Fiction", "Thriller", "Young-Adult"];
 
 export default function SideMenu() {
     const router = useRouter();

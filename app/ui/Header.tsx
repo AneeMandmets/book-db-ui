@@ -14,9 +14,9 @@ export default function Header() {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <div className={`flex h-16 w-full flex-row items-center justify-between ${alumniSans.variable} bg-white dark:bg-gray-900`}>
+        <div className={`flex h-16 w-full flex-row items-center justify-between ${alumniSans.variable} bg-white dark:bg-gray-900 mt-4`}>
             <div className="flex flex-row items-center cursor-pointer text-3xl" onClick={() => router.push('/')}>
-                <p className="font-bold ml-4 text-gray-900 dark:text-white">Book</p>
+                <p className="font-bold ml-8 text-gray-900 dark:text-white">Book</p>
                 <p className="text-blue-500">Database</p>
             </div>
             
