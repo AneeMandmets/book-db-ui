@@ -7,7 +7,7 @@ export default function SideMenu() {
     const router = useRouter();
 
     return (
-        <div className="w-1/10">
+        <div className="w-1/6">
             <div className="pt-4 flex flex-col ml-8 h-full">
                 <p className="text-2xl font-bold mb-4">Genres</p>
                 {genres.map((genre) => ( 

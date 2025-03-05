@@ -21,13 +21,13 @@ export default function SearchBar() {
             <input 
                 type="text" 
                 placeholder="Search..." 
-                className="rounded-full bg-gray-800 text-white p-2 w-96"
+                className="rounded-full dark:text-white p-2 w-96 bg-gray-200 dark:bg-gray-800 text-gray-900 border-gray-400 dark:border-gray-700 border-solid border-2"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />      
             <button 
                 type="submit" 
-                className="bg-blue-500 text-white p-2 rounded-full cursor-pointer"
+                className="dark:bg-blue-700 text-white p-2 rounded-full cursor-pointer dark:hover:bg-blue-800 bg-blue-600 hover:bg-blue-500"
             >
                 Search
             </button>
