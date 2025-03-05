@@ -1,13 +1,19 @@
 import { books } from "@/app/data/books";
 import StaticBookDisplay from "@/app/components/StaticBookDisplay";
+import { Metadata } from "next";
 
 type Props = {
   params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-// Mark the component as async
-export default async function BookPage({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const book = books.find(b => b.id === params.id);
+  return {
+    title: book?.title || 'Book Not Found',
+  };
+}
+
+export default function BookPage({ params }: Props) {
   const book = books.find(b => b.id === params.id);
   
   if (!book) {
