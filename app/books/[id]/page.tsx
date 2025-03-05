@@ -23,7 +23,6 @@ const getBookById = (id: string): Book | undefined => {
 
 export default async function BookPage({ 
   params,
-  searchParams 
 }: PageProps) {
   const book = getBookById(params.id);
 
