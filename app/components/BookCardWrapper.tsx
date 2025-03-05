@@ -11,7 +11,6 @@ export default function BookCardWrapper({ book }: { book: Book }) {
   return (
     <BookCard 
       book={book}
-      onClick={handleClick}
     />
   );
 } 
