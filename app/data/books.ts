@@ -27,5 +27,14 @@ export const books: Book[] = [
     genre: "Classic",
     description: "A novel about the American Dream",
     coverImage: '/book-covers/the-catcher-in-the-rye.jpg'
+  },
+  {
+    id: "4",
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    publishedYear: 1960,
+    genre: "Classic",
+    description: "A novel about the American Dream",
+    coverImage: '/book-covers/to-kill-a-mockingbird.jpg'
   }
 ]; 
