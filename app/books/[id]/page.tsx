@@ -2,22 +2,22 @@ import { books } from "@/app/data/books";
 import StaticBookDisplay from "@/app/components/StaticBookDisplay";
 import { Metadata } from "next";
 
-type PageProps = {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+interface Props {
+  params: { id: string };
+  searchParams: Record<string, string | string[] | undefined>;
 }
 
 export async function generateMetadata(
-  { params }: PageProps
+  props: Props
 ): Promise<Metadata> {
-  const book = books.find(b => b.id === params.id);
+  const book = books.find(b => b.id === props.params.id);
   return {
     title: book?.title || 'Book Not Found',
   };
 }
 
-export default async function BookPage({ params }: PageProps) {
-  const book = books.find(b => b.id === params.id);
+export default function BookPage(props: Props) {
+  const book = books.find(b => b.id === props.params.id);
   
   if (!book) {
     return <div>Book not found</div>;
