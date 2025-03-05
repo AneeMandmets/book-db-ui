@@ -1,9 +1,10 @@
 import { books } from "@/app/data/books";
 import StaticBookDisplay from "@/app/components/StaticBookDisplay";
 
-interface Props {
-  params: { id: string }
-}
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 // Mark the component as async
 export default async function BookPage({ params }: Props) {
