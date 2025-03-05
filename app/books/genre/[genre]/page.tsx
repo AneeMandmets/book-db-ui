@@ -6,7 +6,7 @@ import { Book } from "@/app/types";
 
 export default function GenrePage() {
     const params = useParams();
-    const genre = params.genre;
+    const genre = typeof params.genre === 'string' ? params.genre.replace(/-/g, ' ') : '';
 
     const filteredBooks = books.filter((book: Book) => book.genre === genre);
 

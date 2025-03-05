@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from "next/navigation";
 
-const genres = ["Action", "Adventure", "Biography", "Comedy", "Classic", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Science Fiction", "Thriller"];
+const genres = ["Action", "Adventure", "Biography", "Comedy", "Classic", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Science-Fiction", "Thriller"];
 
 export default function SideMenu() {
     const router = useRouter();
@@ -14,7 +14,7 @@ export default function SideMenu() {
                     <div key={genre}>
                         <p 
                             className="leading-10 cursor-pointer hover:text-blue-500" 
-                            onClick={() => router.push(`/genre/${genre}`)}
+                            onClick={() => router.push(`/books/genre/${genre}`)}
                         >
                             {genre}
                         </p>

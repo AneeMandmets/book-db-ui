@@ -29,8 +29,8 @@ export default function BookCard({ book, onClick }: BookCardProps) {
             <Image
                 src={book.coverImage || defaultCover}
                 alt={book.title}
-                width={156}
                 height={234}
+                width={156}
                 className="object-cover rounded-md"
             />
         </div>
