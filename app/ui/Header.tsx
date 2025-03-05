@@ -16,14 +16,14 @@ export default function Header() {
     };
 
     return (
-        <div className={`flex h-16 w-full flex-row black text-white items-center text-3xl justify-between ${alumniSans.variable}`}>
-            <div className="flex flex-row items-center cursor-pointer" onClick={handleClick}>
+        <div className={`flex h-16 w-full flex-row black text-white items-center justify-between ${alumniSans.variable}`}>
+            <div className="flex flex-row items-center cursor-pointer text-3xl" onClick={handleClick}>
                 <p className="font-bold ml-4">Book</p>
-                <p>Database</p>
+                <p className="text-blue-500">Database</p>
             </div>
             
             <SearchBar />
-            <p className="mr-4">Hello, Guest!</p>
+            <p className="mr-4 text-xl text-blue-500">Hello, Guest!</p>
         </div>
     );
 }
