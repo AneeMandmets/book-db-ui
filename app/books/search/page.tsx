@@ -3,8 +3,9 @@ import { useSearchParams } from 'next/navigation';
 import { books } from "@/app/data/books";
 import BookCardWrapper from "@/app/components/BookCardWrapper";
 import { Book } from "@/app/types";
+import { Suspense } from 'react';
 
-export default function SearchResults() {
+function SearchResultsContent() {
     const searchParams = useSearchParams();
     const query = searchParams.get('q') || '';
     
@@ -24,5 +25,13 @@ export default function SearchResults() {
                 ))}
             </div>
         </div>
+    );
+}
+
+export default function SearchResults() {
+    return (
+        <Suspense fallback={<div className="p-8">Loading...</div>}>
+            <SearchResultsContent />
+        </Suspense>
     );
 } 
