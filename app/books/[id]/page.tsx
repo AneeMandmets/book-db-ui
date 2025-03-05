@@ -1,31 +1,22 @@
-import { books } from "@/app/data/books";
-import StaticBookDisplay from "@/app/components/StaticBookDisplay";
-import { Metadata } from "next";
+import { Book } from "../../types";
+import { books } from "../../data/books";
+import StaticBookDisplay from "../../components/StaticBookDisplay";
 
-interface Props {
-  params: { id: string };
-  searchParams: Record<string, string | string[] | undefined>;
-}
-
-export async function generateMetadata(
-  props: Props
-): Promise<Metadata> {
-  const book = books.find(b => b.id === props.params.id);
-  return {
-    title: book?.title || 'Book Not Found',
+const getBookById = (id: string): Book | undefined => {
+    
+    return books.find(book => book.id === id);
   };
-}
 
-export default function BookPage(props: Props) {
-  const book = books.find(b => b.id === props.params.id);
-  
-  if (!book) {
-    return <div>Book not found</div>;
-  }
+export default function BookPage({ params }: { params: { id: string}}) {
+    const book = getBookById(params.id);
 
-  return (
-    <div className="p-8">
-      <StaticBookDisplay book={book} />
-    </div>
-  );
+    if (!book) {
+        return <div>Book not found</div>;
+    }
+
+    return (
+        <div className="p-8">
+            <StaticBookDisplay book={book} />
+        </div>
+    );
 }
