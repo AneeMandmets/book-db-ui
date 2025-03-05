@@ -2,14 +2,7 @@
 import { Book } from "../../types";
 import { books } from "../../data/books";
 import StaticBookDisplay from "../../components/StaticBookDisplay";
-import { Metadata } from "next";
 import { useParams } from 'next/navigation';
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Book Details',
-  };
-}
 
 export default function BookPage() {
   const params = useParams();
