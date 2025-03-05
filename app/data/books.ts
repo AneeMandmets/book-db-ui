@@ -19,4 +19,13 @@ export const books: Book[] = [
     description: "A dystopian novel about a totalitarian society",
     coverImage: '/book-covers/1984.jpg'
   },
+  {
+    id: "3",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    publishedYear: 1951,
+    genre: "Classic",
+    description: "A novel about the American Dream",
+    coverImage: '/book-covers/the-catcher-in-the-rye.jpg'
+  }
 ]; 
