@@ -1,5 +1,4 @@
 'use client'
-import { Book } from "../../types";
 import { books } from "../../data/books";
 import StaticBookDisplay from "../../components/StaticBookDisplay";
 import { useParams } from 'next/navigation';
