@@ -8,7 +8,9 @@ export default function GenrePage() {
     const params = useParams();
     const genre = typeof params.genre === 'string' ? params.genre.replace(/-/g, ' ') : '';
 
-    const filteredBooks = books.filter((book: Book) => book.genre === genre);
+    const filteredBooks = books.filter((book: Book) => 
+        book.genres.includes(genre)
+    );
 
     return (
         <div className="p-8">
